@@ -1,22 +1,17 @@
-from looping_functions import for_loop_make_tuple
-from typing import Callable
 import cProfile
 import re
 import io
 import pstats
 import time
-from devtools import debug
 
-cProfile.run("list_comprehension_make_tuple()", sort=-1)
+# cProfile.run("list_comprehension_make_tuple()", sort=-1)
 pr = cProfile.Profile()
-pr.enable()
-# for_loop_make_tuple()
-re.compile("foo|bar")
-pr.disable()
+# pr.enable()
+# pr.disable()
 
 
 def profile_function(fn: callable, *args, n=100):
-    # pr.enable()
+    pr.enable()
     start = time.time()
 
     for x in range(n):
