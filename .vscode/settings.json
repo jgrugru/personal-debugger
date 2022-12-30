@@ -1,29 +1,7 @@
 {
-    "python.defaultInterpreterPath": "/home/jgruenbaum/.cache/pypoetry/virtualenvs/<env_name>/bin/python",
-    "python.analysis.extraPaths": [
-        "<path>"
-    ],
-    "python.envFile": "/Users/jeffgruenbaum/projects/Underlier-API/.env",
+    "python.defaultInterpreterPath": "/Users/jeffgruenbaum/Library/Caches/pypoetry/virtualenvs/personal-debugger-kMgIwsjY-py3.11/bin/python",
     
-    
-    "python.linting.flake8Enabled": true,
-    "python.linting.enabled": true,
-    "python.formatting.blackArgs": [
-        "--line-length 120",
-        "120"
-    ],
-    
-    
-    "python.formatting.provider": "black",
-    "python.linting.flake8Args": [
-        "--max-line-length=120",
-        "--ignore=F811, F401"
-    ],
-    
-    
-    "python.poetryPath": "/opt/homebrew/bin/poetry",
-    "python.testing.pytestEnabled": true,
-    "editor.formatOnSave": true,
+
     "files.exclude": {
         "**/__pycache__": true,
         "**/.pytest_cache": true,
