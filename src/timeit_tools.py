@@ -1,6 +1,7 @@
 from typing import Callable, List
 import time
 import statistics
+from loguru import logger
 
 
 def time_my_function(fn: Callable, n: int = 100, precision: int = 6, *args, **kwargs) -> List[float]:
@@ -18,8 +19,8 @@ def time_my_function(fn: Callable, n: int = 100, precision: int = 6, *args, **kw
 
     average = round(sum(list_of_times) / n, precision)
     std_dev = round(statistics.stdev(list_of_times), precision)
-    minimum = round(min(list_of_times), 6)
-    maximum = round(max(list_of_times), 6)
+    minimum = round(min(list_of_times), precision)
+    maximum = round(max(list_of_times), precision)
 
-    print(f"\t{n} times: mean={average}, median={statistics.median(list_of_times)}, stdev={std_dev}, min={minimum}, max={maximum}")
+    logger.info(f"{n} times: mean={average}, median={round(statistics.median(list_of_times), precision)}, stdev={std_dev}, min={minimum}, max={maximum}")
     return list_of_times
